@@ -54,7 +54,7 @@ The project includes visible keyboard focus indicators, keyboard-accessible inte
 - Added responsive layout behavior
 - Added keyboard and reduced-motion accessibility
 
-### [Hien Dao]
+### Hien Dao
 - Created the interactive gravestones and hover ghosts
 - Added and animated the cyclist
 - Added and animated the dead trees
@@ -70,5 +70,7 @@ The project includes visible keyboard focus indicators, keyboard-accessible inte
 └── assets/
     ├── images/
     └── fonts/
+
+
 
 
