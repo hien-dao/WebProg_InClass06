@@ -53,9 +53,30 @@
 
 @keyframes fade-loop {
   0%, 100% {
-    opacity: 1; /* Fully visible at the start and end */
+    opacity: 1;
   }
   50% {
-    opacity: 0.3; /* Most transparent at the halfway point */
+    opacity: 0.3;
   }
 }
+
+/* Cyclist passes at distance */
+.cyclist {
+  position: fixed;
+  bottom: 20%;
+  right: -100px;
+  font-size: 5em;
+  opacity: 0.7;
+  animation: biking-loop 8s linear infinite;
+}
+
+@keyframes biking-loop {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100vw - 200px));
+  }
+}
+
