@@ -33,8 +33,8 @@
 
 /* Fog drift */
 @keyframes drift {
-  from { transform: translateX(-100%); }
-  to   { transform: translateX(100%); }
+  from { transform: translateX(0);}
+  to   { transform: translateX(calc(100vw + 320px)); }
 }
 
 
@@ -57,6 +57,7 @@
     background-color: var(--ghost-white);
     border-radius: 50%;
     box-shadow: 0 0 30px var(--candle-glow);
+    z-index: 1;
 }
 
 /*Clouds*/
@@ -67,6 +68,7 @@
     background-color: var(--ghost-white);
     border-radius: 50px;
     opacity: 0.7;
+    z-index: 2;
 }
 
 .cloud::before,
@@ -93,12 +95,13 @@
 
 .cloud-one {
     top: 120px;
-    left: 10%;
+    left: -160px;
     animation: drift 12s linear infinite;
 }
 
 .cloud-two {
     top: 250px;
-    left: 45%;
+    left: -160px;
     animation: drift 18s linear infinite;
+    animation-delay: -7s;
 }
