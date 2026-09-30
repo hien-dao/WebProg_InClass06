@@ -201,11 +201,18 @@
     display: block;
     width: 70px;
     height: auto;
+
+    animation: cat-bob 0.4s ease-in-out infinite;
 }
 
 @keyframes cat-trot {
     from { transform: translateX(0);}
     to { transform: translateX(calc(100vw + 430px));}
+}
+
+@keyframes cat-bob {
+    0%, 100% { transform: translateY(0); }
+    50% {transform: translateY(-3px); }
 }
 
 /* Small ghosts appear when hover over gravestone */
