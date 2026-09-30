@@ -424,3 +424,33 @@
       transform: rotate(4.5deg);
   }
 }
+
+
+/*Three Scenes*/
+
+/*Subtely Darken the screen as you go deeper into the graveyard*/
+.graves-scene .sky {
+    background-color: #15101d;
+}
+
+.graves-scene .ground {
+    background: linear-gradient(
+        to bottom,
+        #15101d 0%,
+        #211629 8%,
+        #2b1c35 100%
+    );
+}
+
+.deep-scene .sky {
+    background-color: #100c17;
+}
+
+.deep-scene .ground {
+    background: linear-gradient(
+        to bottom,
+        #100c17 0%,
+        #1c1324 8%,
+        #26172f 100%
+    );
+}
