@@ -289,18 +289,50 @@
 /* Small ghosts appear when hover over gravestone */
 .gravestone-row {
     position: absolute;
-    bottom: 20%;
-    width: 35vw;
-
-    display: flex;
-    justify-content: space-around;
-
+    inset: 0;
     z-index: 4;
+
+    pointer-events: none;
 }
+
 .gravestone {
-  position: relative;
-  font-size: 3em;
+    position: absolute;
+    font-size: 3em;
+    pointer-events: auto;
+    z-index: 6;
+    cursor: pointer;
 }
+
+.grave-one {
+    left: 12%;
+    bottom: 19%;
+    font-size: 2.5em;
+}
+
+.grave-two {
+    left: 27%;
+    bottom: 24%;
+    font-size: 2em;
+}
+
+.grave-three {
+    left: 43%;
+    bottom: 17%;
+    font-size: 3em;
+}
+
+.grave-four {
+    left: 55%;
+    bottom: 25%;
+    font-size: 2.2em;
+}
+
+.grave-five {
+    left: 80%;
+    bottom: 18%;
+    font-size: 2.7em;
+}
+
 .gravestone .ghost {
   position: absolute;
   bottom: 100%;
@@ -311,6 +343,8 @@
   font-size: 1em;
   display: none;
   animation: fade-loop 2s ease-in-out infinite;
+  pointer-events: none;
+
 }
 
 .gravestone:hover .ghost {
