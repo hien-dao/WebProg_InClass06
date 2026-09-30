@@ -217,6 +217,46 @@
     50% {transform: translateY(-3px); }
 }
 
+
+/* Navigation */
+/* Scene navigation */
+.scene-nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 20px;
+
+    z-index: 10;
+}
+
+.scene-nav a {
+    padding: 10px 16px;
+
+    color: var(--ghost-white);
+    background-color: var(--candy-purple);
+
+    text-decoration: none;
+    border-radius: 8px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.scene-nav a:hover,
+.scene-nav a:focus {
+    background-color: var(--pumpkin);
+    transform: translateY(-3px);
+}
+
+.scene-nav a:focus-visible {
+    outline: 3px solid var(--candle-glow);
+    outline-offset: 3px;
+}
+
 /* Graveyard ground */
 .ground {
     position: absolute;
