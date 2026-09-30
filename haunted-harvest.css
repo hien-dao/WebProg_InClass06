@@ -117,9 +117,16 @@
   justify-content: space-between;
 }
 .gravestone {
+  position: relative;
   font-size: 3em;
 }
 .gravestone .ghost {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+
+  transform: translateX(-50%);
+  
   font-size: 1em;
   display: none;
   animation: fade-loop 2s ease-in-out infinite;
