@@ -191,14 +191,21 @@
 .cat-path {
     position: absolute;
     bottom: 35px;
-    left: 100px;
+    left: -260px;
     z-index: 3;
+
+    animation: cat-trot 15s linear infinite;
 }
 
 .trotting-cat {
     display: block;
     width: 70px;
     height: auto;
+}
+
+@keyframes cat-trot {
+    from { transform: translateX(0);}
+    to { transform: translateX(calc(100vw + 430px));}
 }
 
 /* Small ghosts appear when hover over gravestone */
