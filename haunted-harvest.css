@@ -70,6 +70,8 @@
     height: 100vh;
     background-color: var(--spider-black);
     overflow: hidden;
+
+    --ground-level: 12%;
 }
 
 /*Full Moon*/
@@ -171,7 +173,7 @@
 /* Walking couple */
 .couple-path {
     position: absolute;
-    bottom: 40px;
+    bottom: var(--ground-level);
     left: -170px;
     z-index: 5;
 
@@ -190,7 +192,7 @@
 /* Cat */
 .cat-path {
     position: absolute;
-    bottom: 35px;
+    bottom: var(--ground-level);
     left: -260px;
     z-index: 5;
 
