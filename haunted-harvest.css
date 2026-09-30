@@ -155,6 +155,16 @@
         orb-blink 1.8s ease-in-out infinite;
 }
 
+/* Walking couple */
+.walking-couple {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    bottom: 40px;
+    left: -200px;
+    z-index: 3;
+}
+
 /* Small ghosts appear when hover over gravestone */
 .gravestone {
   font-size: 3em;
