@@ -94,9 +94,11 @@
 .cloud-one {
     top: 120px;
     left: 10%;
+    animation: drift 12s linear infinite;
 }
 
 .cloud-two {
     top: 250px;
     left: 45%;
+    animation: drift 18s linear infinite;
 }
