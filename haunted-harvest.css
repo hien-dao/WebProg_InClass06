@@ -104,12 +104,18 @@
     left: -160px;
     animation: drift 18s linear infinite;
     animation-delay: -7s;
-}
+
   from { transform: translateX(-100%); }
   to   { transform: translateX(100%); }
 }
 
 /* Small ghosts appear when hover over gravestone */
+.gravestone-row {
+  position: fixed;
+  bottom: 20%;
+  display: flex;
+  justify-content: space-between;
+}
 .gravestone {
   font-size: 3em;
 }
