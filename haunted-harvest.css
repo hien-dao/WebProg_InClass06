@@ -454,3 +454,70 @@
         #26172f 100%
     );
 }
+
+
+
+
+/* Mobile responsive layout */
+@media (max-width: 600px) {
+
+    .moon {
+        width: 100px;
+        height: 100px;
+        top: 80px;
+        right: 5%;
+    }
+
+    .cloud {
+        width: 100px;
+        height: 35px;
+    }
+
+    .cloud::before {
+        width: 45px;
+        height: 45px;
+    }
+
+    .cloud::after {
+        width: 55px;
+        height: 55px;
+    }
+
+    .walking-couple {
+        width: 110px;
+    }
+
+    .trotting-cat {
+        width: 50px;
+    }
+
+    .tree-one {
+        height: 240px;
+    }
+
+    .tree-two {
+        height: 260px;
+    }
+
+    .tree-three {
+        height: 250px;
+    }
+
+    .cyclist {
+        font-size: 3.5em;
+    }
+
+    .scene-nav {
+        top: 10px;
+        width: 95%;
+
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .scene-nav a {
+        padding: 8px 6px;
+        font-size: 0.75rem;
+        text-align: center;
+    }
+}
