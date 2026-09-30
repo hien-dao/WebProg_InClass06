@@ -217,6 +217,25 @@
     50% {transform: translateY(-3px); }
 }
 
+/* Graveyard ground */
+.ground {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 32%;
+
+    background: linear-gradient(
+        to bottom,
+        #1a1423 0%,
+        #241a2e 8%,
+        #30213b 100%
+    );
+
+    z-index: 0;
+}
+
 /* Small ghosts appear when hover over gravestone */
 .gravestone-row {
     position: absolute;
