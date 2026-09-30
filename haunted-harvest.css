@@ -10,10 +10,11 @@
 
 /* Reduced Motion Preferences */
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-  }
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 /* CSS-only scene switching; wrap scenes in .scenes */
@@ -217,6 +218,59 @@
     50% {transform: translateY(-3px); }
 }
 
+
+.scene-title {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: var(--ghost-white);
+    text-align: center;
+
+    z-index: 8;
+}
+
+/* Navigation */
+/* Scene navigation */
+.scene-nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: 20px;
+
+    z-index: 10;
+}
+
+.scene-nav a {
+    padding: 10px 16px;
+
+    color: var(--ghost-white);
+    background-color: var(--candy-purple);
+
+    text-decoration: none;
+    border-radius: 8px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.scene-nav a:hover,
+.scene-nav a:focus {
+    background-color: var(--pumpkin);
+    transform: translateY(-3px);
+}
+
+.scene-nav a:focus-visible {
+    outline: 3px solid var(--candle-glow);
+    outline-offset: 3px;
+}
+
 /* Graveyard ground */
 .ground {
     position: absolute;
@@ -239,18 +293,50 @@
 /* Small ghosts appear when hover over gravestone */
 .gravestone-row {
     position: absolute;
-    bottom: 20%;
-    width: 35vw;
-
-    display: flex;
-    justify-content: space-around;
-
+    inset: 0;
     z-index: 4;
+
+    pointer-events: none;
 }
+
 .gravestone {
-  position: relative;
-  font-size: 3em;
+    position: absolute;
+    font-size: 3em;
+    pointer-events: auto;
+    z-index: 6;
+    cursor: pointer;
 }
+
+.grave-one {
+    left: 12%;
+    bottom: 19%;
+    font-size: 2.5em;
+}
+
+.grave-two {
+    left: 27%;
+    bottom: 24%;
+    font-size: 2em;
+}
+
+.grave-three {
+    left: 43%;
+    bottom: 17%;
+    font-size: 3em;
+}
+
+.grave-four {
+    left: 55%;
+    bottom: 25%;
+    font-size: 2.2em;
+}
+
+.grave-five {
+    left: 80%;
+    bottom: 18%;
+    font-size: 2.7em;
+}
+
 .gravestone .ghost {
   position: absolute;
   bottom: 100%;
@@ -261,10 +347,19 @@
   font-size: 1em;
   display: none;
   animation: fade-loop 2s ease-in-out infinite;
+  pointer-events: none;
+
 }
 
-.gravestone:hover .ghost {
-  display: block;
+.gravestone:hover .ghost,
+.gravestone:focus .ghost {
+    display: block;
+}
+
+.gravestone:focus-visible {
+    outline: 3px solid var(--candle-glow);
+    outline-offset: 5px;
+    border-radius: 5px;
 }
 
 @keyframes fade-loop {
@@ -339,4 +434,108 @@
   50% {
       transform: rotate(4.5deg);
   }
+}
+
+
+/*Three Scenes*/
+
+/*Subtely Darken the screen as you go deeper into the graveyard*/
+.graves-scene .sky {
+    background-color: #15101d;
+}
+
+.graves-scene .ground {
+    background: linear-gradient(
+        to bottom,
+        #15101d 0%,
+        #211629 8%,
+        #2b1c35 100%
+    );
+}
+
+.deep-scene .sky {
+    background-color: #100c17;
+}
+
+.deep-scene .ground {
+    background: linear-gradient(
+        to bottom,
+        #100c17 0%,
+        #1c1324 8%,
+        #26172f 100%
+    );
+}
+
+
+
+
+/* Mobile responsive layout */
+@media (max-width: 600px) {
+
+    .moon {
+        width: 100px;
+        height: 100px;
+        top: 80px;
+        right: 5%;
+    }
+
+    .cloud {
+        width: 100px;
+        height: 35px;
+    }
+
+    .cloud::before {
+        width: 45px;
+        height: 45px;
+    }
+
+    .cloud::after {
+        width: 55px;
+        height: 55px;
+    }
+
+    .walking-couple {
+        width: 110px;
+    }
+
+    .trotting-cat {
+        width: 50px;
+    }
+
+    .tree-one {
+        height: 240px;
+    }
+
+    .tree-two {
+        height: 260px;
+    }
+
+    .tree-three {
+        height: 250px;
+    }
+
+    .cyclist {
+        font-size: 3.5em;
+    }
+
+    .scene-nav {
+        top: 10px;
+        width: 95%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .scene-nav a {
+        padding: 8px 6px;
+        font-size: 0.75rem;
+        text-align: center;
+    }
+
+    .scene-title {
+        top: 55px;
+        font-size: 1.2rem;
+    }
 }

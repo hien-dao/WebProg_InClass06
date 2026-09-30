@@ -8,21 +8,25 @@
     <link rel="stylesheet" href="haunted-harvest.css">
 </head>
 <body>
+
+    <nav class="scene-nav" aria-label="Graveyard scenes">
+        <a href="#scene1">Graveyard Entrance</a>
+        <a href="#scene2">Haunted Graves</a> 
+        <a href="#scene3">Deeper into the Graveyard</a>
+    </nav>
+
     <main class="scenes">
-        <section id="scene1" class="scene">
+        <section id="scene1" class="scene entrance-scene">
+            <h1 class="scene-title">Graveyard Entrance</h1>
+
             <div class="sky">
                 <div class="ground"></div>
-                
+
                 <div class="moon"></div>
 
                 <div class="cloud cloud-one"></div>
                 <div class="cloud cloud-two"></div>
 
-                <div class="ghost-orbs">
-                    <div class="orb orb-one"></div>
-                    <div class="orb orb-two"></div>
-                    <div class="orb orb-three"></div>
-                </div>
 
                 <div class="couple-path">
                     <img src="assets/images/couple.webp"
@@ -38,33 +42,120 @@
                     >
                 </div>
 
+                <img
+                    src="assets/images/dead_tree1.png"
+                    class="dead-tree tree-one"
+                    alt="Dead tree">
+
+                <img
+                    src="assets/images/dead_tree2.png"
+                    class="dead-tree tree-two"
+                    alt="Dead tree">
+
+                <img
+                    src="assets/images/dead_tree3.png"
+                    class="dead-tree tree-three"
+                    alt="Dead tree">
+
+            </div>
+            
+        </section>
+
+        <section id="scene2" class="scene graves-scene">
+            <h1 class="scene-title">Haunted Graves</h1>
+
+            <div class="sky">
+
+                <div class="ground"></div>
+
+                <div class="moon"></div>
+
+                <div class="cloud cloud-one"></div>
+                <div class="cloud cloud-two"></div>
+
+                <div class="ghost-orbs">
+                    <div class="orb orb-one"></div>
+                    <div class="orb orb-two"></div>
+                    <div class="orb orb-three"></div>
+                </div>
 
                 <!-- Small ghosts appear when hover over gravestone -->
-                <div class="gravestone-row">
-                    <div class="gravestone">
-                        🪦
-                        <div class="ghost">👻</div>
-                    </div>
+                <div class="gravestone grave-one" tabindex="0">
+                    🪦
+                    <div class="ghost">👻</div>
+                </div>
 
-                    <div class="gravestone">
-                        🪦
-                        <div class="ghost">👻</div>
-                    </div>
+                <div class="gravestone grave-two" tabindex="0">
+                    🪦
+                    <div class="ghost">👻</div>
+                </div>
 
-                    <div class="gravestone">
-                        🪦
-                        <div class="ghost">👻</div>
-                    </div>
+                <div class="gravestone grave-three" tabindex="0">
+                    🪦
+                    <div class="ghost">👻</div>
+                </div>
 
-                    <div class="gravestone">
-                        🪦
-                        <div class="ghost">👻</div>
-                    </div>
+                <div class="gravestone grave-four" tabindex="0">
+                    🪦
+                    <div class="ghost">👻</div>
+                </div>
 
-                    <div class="gravestone">
-                        🪦
-                        <div class="ghost">👻</div>
-                    </div>
+                <div class="gravestone grave-five" tabindex="0">
+                    🪦
+                    <div class="ghost">👻</div>
+                </div>
+
+                <img
+                    src="assets/images/dead_tree1.png"
+                    class="dead-tree tree-one"
+                    alt="Dead tree"
+                >
+
+                <img
+                    src="assets/images/dead_tree2.png"
+                    class="dead-tree tree-two"
+                    alt="Dead tree"
+                >
+
+                <img
+                    src="assets/images/dead_tree3.png"
+                    class="dead-tree tree-three"
+                    alt="Dead tree"
+                >
+
+            </div>
+        </section>
+
+        <section id="scene3" class="scene deep-scene">
+            <h1 class="scene-title">Haunted Graves</h1>
+
+            <div class="sky">
+
+                <div class="ground"></div>
+
+                <div class="moon"></div>
+
+                <div class="cloud cloud-one"></div>
+                <div class="cloud cloud-two"></div>
+
+                <div class="ghost-orbs">
+                    <div class="orb orb-one"></div>
+                    <div class="orb orb-two"></div>
+                    <div class="orb orb-three"></div>
+                </div>
+
+                <div class="couple-path">
+                    <img
+                        src="assets/images/couple.webp"
+                        class="walking-couple"
+                        alt="Couple walking together">
+                </div>
+
+                <div class="cat-path">
+                    <img
+                        src="assets/images/cat.png"
+                        class="trotting-cat"
+                        alt="Black cat trotting behind the couple">
                 </div>
 
                 <div class="cyclist">
@@ -87,7 +178,6 @@
                     alt="Dead tree">
 
             </div>
-            
         </section>
     </main>
 </body>
