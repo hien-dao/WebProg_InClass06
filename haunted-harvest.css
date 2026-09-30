@@ -37,6 +37,31 @@
   to   { transform: translateX(calc(100vw + 320px)); }
 }
 
+/*Ghost Orb Animations*/
+
+/*Allows the ghost orbs to float*/
+@keyframes float-orb {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-30px);}
+}
+
+@keyframes orb-blink {
+    0%, 100% {opacity: 0.8;}
+    50% {opacity: 0.25;}
+}
+
+/* Walking Couple Animation */
+@keyframes couple-walk {
+    from {transform: translateX(0);}
+
+    to {transform: translateX(calc(100vw + 340px));}
+}
+
+@keyframes walking-bob {
+    0%, 100% { transform: translateY(0); }
+
+    50% { transform: translateY(-4px); }
+}
 
 /* Graveyard night sky */
 .sky {
@@ -104,6 +129,90 @@
     left: -160px;
     animation: drift 18s linear infinite;
     animation-delay: -7s;
+}
+  
+/* Ghost orbs */
+.orb {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: var(--ghost-white);
+    border-radius: 50%;
+    box-shadow:
+        0 0 10px var(--ghost-white),
+        0 0 20px var(--candy-purple);
+    opacity: 0.8;
+}
+
+.orb-one {
+    top: 45%;
+    left: 20%;
+    animation:
+        float-orb 4s ease-in-out infinite,
+        orb-blink 2s ease-in-out infinite;
+}
+
+.orb-two {
+    top: 60%;
+    left: 50%;
+    animation:
+        float-orb 5s ease-in-out infinite,
+        orb-blink 2.5s ease-in-out infinite;
+}
+
+.orb-three {
+    top: 35%;
+    left: 75%;
+    animation:
+        float-orb 3.5s ease-in-out infinite,
+        orb-blink 1.8s ease-in-out infinite;
+}
+
+/* Walking couple */
+.couple-path {
+    position: absolute;
+    bottom: 40px;
+    left: -170px;
+    z-index: 3;
+
+    animation: couple-walk 15s linear infinite;
+}
+
+.walking-couple {
+    display: block;
+    width: 150px;
+    height: auto;
+
+    animation: walking-bob 0.6s ease-in-out infinite;
+}
+
+
+/* Cat */
+.cat-path {
+    position: absolute;
+    bottom: 35px;
+    left: -260px;
+    z-index: 3;
+
+    animation: cat-trot 15s linear infinite;
+}
+
+.trotting-cat {
+    display: block;
+    width: 70px;
+    height: auto;
+
+    animation: cat-bob 0.4s ease-in-out infinite;
+}
+
+@keyframes cat-trot {
+    from { transform: translateX(0);}
+    to { transform: translateX(calc(100vw + 430px));}
+}
+
+@keyframes cat-bob {
+    0%, 100% { transform: translateY(0); }
+    50% {transform: translateY(-3px); }
 
   from { transform: translateX(-100%); }
   to   { transform: translateX(100%); }
