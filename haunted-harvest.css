@@ -44,8 +44,18 @@
 .gravestone .ghost {
   font-size: 1em;
   display: none;
+  animation: fade-loop 2s ease-in-out infinite;
 }
 
 .gravestone:hover .ghost {
   display: block;
+}
+
+@keyframes fade-loop {
+  0%, 100% {
+    opacity: 1; /* Fully visible at the start and end */
+  }
+  50% {
+    opacity: 0.3; /* Most transparent at the halfway point */
+  }
 }
