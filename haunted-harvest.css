@@ -105,3 +105,29 @@
     animation: drift 18s linear infinite;
     animation-delay: -7s;
 }
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(100%); }
+}
+
+/* Small ghosts appear when hover over gravestone */
+.gravestone {
+  font-size: 3em;
+}
+.gravestone .ghost {
+  font-size: 1em;
+  display: none;
+  animation: fade-loop 2s ease-in-out infinite;
+}
+
+.gravestone:hover .ghost {
+  display: block;
+}
+
+@keyframes fade-loop {
+  0%, 100% {
+    opacity: 1; /* Fully visible at the start and end */
+  }
+  50% {
+    opacity: 0.3; /* Most transparent at the halfway point */
+  }
+}
