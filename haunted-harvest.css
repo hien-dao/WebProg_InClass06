@@ -168,3 +168,45 @@
   }
 }
 
+/* Dead trees swaying in the wind */
+.dead-tree {
+  position: absolute;
+  bottom: 20%;
+  transform-origin: bottom center;
+  z-index: 3;
+  
+  filter: invert(40%);
+
+  animation: tree-sway 4s ease-in-out infinite;
+}
+
+/* Tree positions */
+.tree-one {
+  left: 6%;
+  height: 380px;
+  animation-duration: 5s;
+}
+
+.tree-two {
+  right: 12%;
+  height: 400px;
+  animation-duration: 6s;
+  animation-delay: -2s;
+}
+
+.tree-three {
+  right: 25%;
+  height: 420px;
+  animation-duration: 6s;
+  animation-delay: -3s;
+}
+
+@keyframes tree-sway {
+  0%, 100% {
+      transform: rotate(-5deg);
+  }
+
+  50% {
+      transform: rotate(4.5deg);
+  }
+}
