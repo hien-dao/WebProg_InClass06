@@ -10,10 +10,11 @@
 
 /* Reduced Motion Preferences */
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-  }
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 /* CSS-only scene switching; wrap scenes in .scenes */
@@ -347,8 +348,15 @@
 
 }
 
-.gravestone:hover .ghost {
-  display: block;
+.gravestone:hover .ghost,
+.gravestone:focus .ghost {
+    display: block;
+}
+
+.gravestone:focus-visible {
+    outline: 3px solid var(--candle-glow);
+    outline-offset: 5px;
+    border-radius: 5px;
 }
 
 @keyframes fade-loop {
